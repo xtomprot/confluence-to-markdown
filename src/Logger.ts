@@ -6,7 +6,7 @@ export class Logger {
   static INFO =  2;
   static WARNING = 3;
   static ERROR = 4;
-  _verbosityLevel: 1;
+  _verbosityLevel: number;
 
 
   /**
