@@ -10,9 +10,9 @@ export class Logger {
 
 
   /**
-   * @param {int} verbosityLevel One of defined constants.
+   * @param {int} verbosityLevel One of defined constants. Defaults to DEBUG.
    */
-  constructor(verbosityLevel: number) {
+  constructor(verbosityLevel: number = Logger.DEBUG) {
     this._setVerbosity(verbosityLevel);
   }
 
