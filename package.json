@@ -33,7 +33,7 @@
     "typescript": "^3.5.1"
   },
   "scripts": {
-    "start": "npx tsc-watch --project C:/Projects/confluence-to-markdown/tsconfig.json --onsuccess \"node dist/index.js\"",
+    "start": "npx tsc-watch --onsuccess \"node dist/index.js\"",
     "build": "npx tsc-watch",
     "test": "npx jest --watchAll"
   }
