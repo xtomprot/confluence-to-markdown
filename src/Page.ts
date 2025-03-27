@@ -49,8 +49,7 @@ export class Page {
     }
     // Use only the last 30 characters of the normalized heading
     const normalizedHeading = Page.normalizeFileName(this.heading);
-    const truncatedHeading = normalizedHeading.slice(-30); // Get the last 30 characters
-    return truncatedHeading + '.md';
+    return normalizedHeading + '.md';
   }
 
   static normalizeFileName(name: string): string{
