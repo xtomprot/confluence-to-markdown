@@ -44,9 +44,13 @@ export class Page {
 
 
   getFileNameNew() : string{
-    if (this.fileName === 'index.html') { return 'index.md'; }
-    // return this.heading.replace(/[\s\\/()]/g, '_') + '.md';
-    return Page.normalizeFileName(this.heading) + '.md';
+    if (this.fileName === 'index.html') {
+        return 'index.md';
+    }
+    // Use only the last 30 characters of the normalized heading
+    const normalizedHeading = Page.normalizeFileName(this.heading);
+    const truncatedHeading = normalizedHeading.slice(-30); // Get the last 30 characters
+    return truncatedHeading + '.md';
   }
 
   static normalizeFileName(name: string): string{
